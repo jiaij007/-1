@@ -1,0 +1,54 @@
+body {
+	background-color: #979797;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header h1{
+	text-align: center;
+    width: 200px;
+    height: 100px;
+    
+    margin: 
+    
+    text-indent: 100%;
+  
+ 
+}
+.page {
+  max-width: 640px;
+  margin: 0 auto 30px auto;
+}
+
+.accordion, .menu {
+  background-color: #f2f2f2;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.accordion li {
+  padding: 0;
+  list-style-type: none;
+}
+
+.accordion-control {
+  background-color: #303030;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  margin: 0;
+  border-top: 1px solid #666;
+}
+
+.accordion-panel {
+  display: none;
+}
+
+.accordion-panel p {
+  margin: 20px;
+}
+

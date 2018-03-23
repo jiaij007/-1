@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<script>
+
+		$(function(){
+        $(".container a").hover(function(){
+            $(this).append("<p id='pic'><img src='"+this.href+"' id='pic1'></p>");
+
+            
+            $(".container a").mousemove(function(e){
+                $("#pic").css({
+                    "top":(e.pageY+10)+"px",
+                    "left":(e.pageX+20)+"px"
+                }).fadeIn("fast");
+                
+            });
+        },function(){
+            $("#pic").remove();
+        });
+    });
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<a href="images/1.jpg" title="超人"><img src="images/1.jpg" alt="超人"></a>
+		<a href="images/2.jpg" title="蜘蛛侠"><img src="images/2.jpg" alt="蜘蛛侠"></a>
+		<a href="images/3.jpg" title="钢铁侠"><img src="images/3.jpg" alt="钢铁侠"></a>
+		<a href="images/4.jpg" title="美国队长"><img src="images/4.jpg" alt="美国队长"></a>
+		<a href="images/5.jpg" title="绿巨人"><img src="images/5.jpg" alt="绿巨人"></a>
+	</div>
+	
+</body>
+</html>
