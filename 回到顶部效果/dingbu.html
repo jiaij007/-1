@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#top {
+		width: 30px;
+		height: 40px;
+		font: 14px/20px arial;
+		text-align: center;
+		background: #06c;
+		position: fixed;
+		cursor: pointer;
+		color: #fff;
+		left: 1250px;
+		top: 500px;
+	}
+</style>
+
+</head>
+<body style="height: 2500px">
+	<div id="top">返回顶部</div>
+	
+</body>
+
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$("#top").click(function(){
+			var $page = $("html,body"); //总距离
+			var distance = $("html").scrollTop() + $("body").scrollTop(); //总时间
+			var time = 500;
+			var intervalTime = 50;
+			var itemDistance = distance/(time/intervalTime);
+			alert(distance);
+
+			var intervalId = setInterval(function(){
+				distance -= itemDistance;
+				if(distance<=0) {
+					distance = 0;
+					clearInterval(intervalId);
+				}
+				$page.scrollTop(distance)
+
+			},intervalTime)
+	})
+})
+</script>
+</html>

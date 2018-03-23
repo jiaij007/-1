@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+@keyframes donghua{
+	0%{background-position: left;}
+	100%{background-position: right;}
+}
+
+.main {
+	width: 500px;
+	border: 1px solid #999;
+	margin: 50px auto;
+	padding: 20px;
+}
+
+.main .row {
+	border-bottom :1px solid #ccc;
+	}
+}
+
+.main .btn {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.main .btn i {
+	width: 100px;
+	height: 100px;
+	background-image: url(images/heart.png);
+	margin-right: 6px;
+	
+	display: inline-block;
+	vertical-align: middle;
+}
+.main .btn.on i{
+	animation:donghua 1.5s forwards steps(28);
+}
+
+.main .btn b{
+	
+	vertical-align: middle;
+}
+
+
+    </style>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+    	$(function(){
+
+    		$(".btn").click(function(){
+    			if($(this).attr("data-key")=="on"){
+    				$(this).addClass("on");
+	    			var num = Number($(this).find("b").html())+1;
+	    			$(this).find("b").html(num);
+	    			$(this).attr("data-key","");
+    			}else{
+    				$(this).removeClass("on");
+	    			var num = Number($(this).find("b").html())-1;
+	    			$(this).find("b").html(num);
+	    			$(this).attr("data-key","on");
+    			}
+
+    			
+    		})
+
+    	})
+
+    </script>
+</head>
+<body>
+	<div class="main">
+		<div class="row">
+			<h2>QQ空间非主流个性签名</h2>
+			<p>癞蛤蟆吃不到天鹅肉，但有权对天鹅好。某 刻、某場悲倨又在某個地方上演。我既然傻到相信我是你的唯一。假装不在乎，其实我很在乎你。我也忘记乐,曾经的世界 是否安静的一片弦音。这段感情、我承受不起、我终于选择放弃、让人失去理智的、是外界的诱惑、而最终耗尽一个人精力的、往往是自己的欲望。</p>
+			<div class="btn" data-key="on">
+				<i></i>
+				<b>12</b>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<h2>QQ空间非主流个性签名</h2>
+			<p>到了一定年龄必须扔掉四样东西 没意义的酒局 不爱你的人 看不起你的亲戚 虚情假义的朋友。</p>
+			<div class="btn" data-key="on">
+				<i></i>
+				<b>47</b>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<h2>QQ空间非主流个性签名</h2>
+			<p>好羡慕每天可以见面的情侣可以一起逛超市吃完早饭商量午饭晚饭吃什么每天可以不用说晚安而是明天见吵架了一个拥抱一个吻就好不用对着手机发毫无感情的文字 更不用在离开的时候害怕哭而忍眼泪 希望所有异地恋的情侣都能彼此抓紧对方的手.</p>
+			<div class="btn" data-key="on">
+				<i></i>
+				<b>8</b>
+			</div>
+
+
+		</div>
+
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+	margin: 0;
+	
+}
+
+body {
+	margin: 50px;
+}
+
+ul {
+	list-style-type: none;
+}
+li {
+	height: 30px;
+	line-height: 30px;
+}
